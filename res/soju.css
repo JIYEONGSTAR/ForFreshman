@@ -1,0 +1,15 @@
+body{
+    background-color: #F8E0E0;
+    color: black;
+ 	text-align: center;
+}
+
+.limit,.greeting,.greetingLimit,.birthday,.notshow{
+    display:none;
+}
+.showing,.showingLimit,.showingBirthday,.change,.showingBirthday{
+    display:block;
+}
+.warning{
+    background-color:red;
+}

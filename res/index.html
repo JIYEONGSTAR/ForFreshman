@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
+    <title>알코올탐지기</title>
+    <link rel="stylesheet" href="soju.css">
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="clock.js"></script>
+    <script type="text/javascript" src="limit.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="change.js"></script>
+</head>
+
+<body>
+    <div class="js-clock">
+        <h1>00:00</h1>
+        <button type="submit" onclick="start_click();">술자리 시작~</button>
+        <h2 class="notshow"></h2>
+    </div>
+    <form class="form" method="post" action="/check">
+        <input name="form" type="text" style="display: block;" placeholder="이름을 입력해 주세요." required />
+        <input name="birthday" type="date" style="display: block;" id="birthday" required/>
+        <input class="notshow" name="limit" type="number" style="display: block;" placeholder="최초 입력시 소주 주량(잔)을 입력" required/>
+        <button type="submit" style="display: block;">확인</button>
+    </form>
+    <h1 class="js-greeting greeting"></h1>
+    <h2 class="js-greetingLimit greetingLimit"></h2>
+    <h2 class="js-greetingBirthday greetingBirthday"></h2>
+    <h3 class="js-change change"></h3>
+    <select class="notshow" name="liquor" id="liquor" style=" text-align: center; margin: auto; margin-bottom: 10px;">
+        <option value="">주종</option>
+        <option value="소주">소주 1잔 (50ml) 17도</option>
+        <option value="맥주">맥주 1잔 (500ml)5도</option>
+        <option value="보드카">보드카 1잔 (30ml) 40도</option>
+        <option value="와인">와인 1잔 (500ml)12도</option>
+        <option value="위스키">위스키 1잔 (30ml)30도</option>
+        <option value="소맥">소맥(mix) 1잔 (200ml) 15도</option>
+        <option value="바카디">바카디 151프루프 1잔 (30ml) 75.5도</option>
+    </select>
+    <button class="choose notshow" name="choose" id="choose" style="margin: auto; margin-bottom: 10px;">Choose</button>
+    <h1 class="warning notshow">더이상 술을 마시지 말아주세요!</h1>
+    <button class="js-click click notshow" onclick="plus_click();">🍺한잔해~🍺
+        <h1 class="js-alcoholLeft alcoholLeft"></h1>
+    </button>
