@@ -205,6 +205,6 @@ function plus_click() {
     } else {
         changeToAnother = changeToAnother - 1;
         changeToAnother = changeToAnother.toFixed(0);
-        alcoholLeft.innerText = `${changeToAnother}잔만 더 마시면 꼴까닥`;
+        alcoholLeft.innerText = `${changeToAnother}잔만 더 마시면 주량을 넘습니다.`;
     }
 }

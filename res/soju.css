@@ -1,13 +1,13 @@
-body{
+body,.form{
     background-color: #F8E0E0;
     color: black;
  	text-align: center;
 }
 
-.limit,.greeting,.greetingLimit,.birthday,.notshow{
+.limit,.notshow{
     display:none;
 }
-.showing,.showingLimit,.showingBirthday,.change,.showingBirthday{
+.change{
     display:block;
 }
 .warning{
